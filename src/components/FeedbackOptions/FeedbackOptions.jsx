@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { INIT_STATE } from 'components/Constants/Constants';
 import { FeedbackOptionWraper, FeedbackButton } from './FeedbackOptions.styled';
 
@@ -23,3 +24,7 @@ export class FeedbackOptions extends Component {
     );
   }
 }
+
+FeedbackOptions.propTypes = {
+  onLeaveFeedback: PropTypes.func.isRequired,
+};

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { StatisticsList, StatisticsItem } from './Statistics.styled';
 import { NotificationMessage } from 'components/NotificationMessage/NotificationMessage';
 
@@ -40,3 +41,11 @@ export class Statistics extends Component {
       : NotificationMessage();
   }
 }
+
+Statistics.propTypes = {
+  state: PropTypes.shape({
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+  }),
+};
